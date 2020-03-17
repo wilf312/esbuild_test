@@ -1,11 +1,11 @@
 {
-  "name": "esbuildTest",
+  "name": "esbuild_test",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "run-p watch serve",
-    "watch": "nodemon --watch src --exec npm run dev -e jsx",
+    "watch": "nodemon --watch src --exec npm run build -e jsx",
     "serve": "cd ./dist && serve -l 9999",
     "dev": "esbuild src/App.jsx --bundle '--define:process.env.NODE_ENV=\"development\"' --outfile=dist/out.js",
     "build": "esbuild src/App.jsx --bundle '--define:process.env.NODE_ENV=\"production\"' --minify --outfile=dist/out.js"
